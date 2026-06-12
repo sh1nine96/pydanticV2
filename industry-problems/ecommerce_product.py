@@ -6,6 +6,20 @@ class Product(BaseModel):
     stock: int = Field(ge=0, description="Stock must be greater than or equal to 0")
     rating: float = Field(ge=1, le=5, description="Rating must be between 1 and 5")
 
+
+#Valid Data Test
+
+product = Product(
+    product_name = "iphone 14",
+    price = 70000,
+    stock = 5,
+    rating = 4.5
+)
+
+print(product)
+
+
+
 # Invalid Data Test
 
 product = Product(
@@ -14,6 +28,8 @@ product = Product(
     stock = -5,
     rating = 6
 )
+
+print(product) 
 
 # We get validation errors for price, stock, and rating because:
 # - Price must be greater than 0, but we passed -70000
