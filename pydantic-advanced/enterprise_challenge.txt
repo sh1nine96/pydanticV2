@@ -1,0 +1,40 @@
+Build a complete Food Delivery Schema.
+
+# Restaurant
+name
+rating
+
+# Item
+name
+rating
+
+#Order
+customer_name
+restaurant
+items
+total_amount
+
+Requirements:
+restaurant → nested model
+items → list of nested models
+total_amount > 0
+
+
+# Challenge 2 (AI Engineer)
+Build RAGResponse with fields query, answer, confidence, sources
+create  Source with fields document_name, page_number
+Requirements:
+confidence between 0 and 1
+sources should be List[Source]
+This is exactly what production RAG systems return.
+
+# Challenge 3
+Build MultiAgentResponse, 
+fields: 
+task
+final_answer
+agents
+
+Create Agent with fields agent_name, role, status
+Where agents: List[Agent]
+This mirrors actual CrewAI/LangGraph outputs.
